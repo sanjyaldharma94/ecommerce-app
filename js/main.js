@@ -1,4 +1,8 @@
 //creating a function to create  list of students of a classroom with their images
+function iphoneShow() {
+  $("display").click(function(){
+    $("this").hide();
+});
 function iphonesList(image, model, year, cost,){
 this.image = image
 this.model = model
@@ -50,32 +54,37 @@ for(i= 0; i < iphoneArr.length; i++){
 	btn.className = "btn btn-lg btn-primary"
 	btn.id ="buybtn";
 
-	 function disappear() {
-	 	alert("Sorry Not Fot sale");
-	 	console.log('this function ran!!')
-	 };
+	
 
 	 image.src = iphoneArr[i].image
 	//creating textnodes for the elements
 	
-	var modelText = document.createTextNode("Model: "+iphoneArr[i].model)
-	var yearText = document.createTextNode("Year of Production: "+iphoneArr[i].year)
-	var costText = document.createTextNode("Cost: "+ iphoneArr[i].cost)
+	var modelText = document.createTextNode("Model: "+iphoneArr[i].model);
+	var yearText = document.createTextNode("Year of Production: "+iphoneArr[i].year);
+	var costText = document.createTextNode("Cost: "+ iphoneArr[i].cost);
 	//sending these created items to the newly created div
     
-    model.appendChild(modelText)
-    year.appendChild(yearText)
-    cost.appendChild(costText)
+    model.appendChild(modelText);
+    year.appendChild(yearText);
+    cost.appendChild(costText);
     //sending the new elementds to the div
-    newDiv.appendChild(image)
-    newDiv.appendChild(model)
-    newDiv.appendChild(year)
-    newDiv.appendChild(cost)
-    newDiv.appendChild(btn)
+    newDiv.appendChild(image);
+    newDiv.appendChild(model);
+    newDiv.appendChild(year);
+    newDiv.appendChild(cost);
+    newDiv.appendChild(btn);
     //sending the div to the parent element in the html page
     parent.appendChild(newDiv)
 
     btn.addEventListener('click', disappear, false);
 }
+
+ function disappear() {
+ 	alert("Sorry not for Sale!");
+	 	console.log('this function ran!!');
+	 };
+
+	};
+ 
 //console.log the  array
 //console.log(iphoneArr);
